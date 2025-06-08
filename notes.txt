@@ -1,0 +1,32 @@
+REPL
+
+read-eval-print-loop , its an env allows you to execute js code in one statement at a time
+
+after entering node in terminal we enter into repl
+
+
+Note js behaves differently in browser and node env, in browser window is defined while in node windor is not defined
+Node has global object
+
+globalThis is a keyword which access the global oject depending upon the env
+
+ modules
+
+self-contained code unit:
+ in order to import a module in app.js or any other file we need to first export that function or module
+
+encapsulation:
+
+nodejs used common js by default(module.export,require) to ensure the code in one file does not pollute or interfere with the global scope
+
+this makes your code modular,maintainable and easier to debug
+
+in module.export only the last one is counted or exported even if there are multiple functions
+
+i.e if u want to export multiple modules export it using 
+
+module.export.add = add;
+module.export.multiply = multiply;
+or
+module.exports = {add,multiply}
+and import using const {add,multiply} = require(''); 
