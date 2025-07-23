@@ -1,0 +1,24 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "Simple Express.js web server with routing and middleware",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "routing",
+    "middleware"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

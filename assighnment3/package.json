@@ -1,0 +1,13 @@
+{
+  "name": "assighnment3",
+  "version": "1.0.0",
+  "description": "Refactoring callback-based code to Promises and async/await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["promises", "async", "await", "refactoring"],
+  "author": "",
+  "license": "ISC"
+}

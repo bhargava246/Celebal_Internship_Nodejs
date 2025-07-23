@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express.js Server Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Express.js Server Demo</h1>
+    <p>This is a simple demonstration of an Express.js server with routing and middleware.</p>
+    
+    <h2>Available API Endpoints:</h2>
+    <ul>
+      <li><code>GET /</code> - Home endpoint</li>
+      <li><code>GET /api/users</code> - Get all users</li>
+      <li><code>GET /api/users/:id</code> - Get user by ID</li>
+      <li><code>POST /api/users</code> - Create a new user</li>
+    </ul>
+    
+    <h2>Test the API:</h2>
+    <div class="api-test">
+      <button id="get-users">Get All Users</button>
+      <button id="get-user">Get User (ID: 1)</button>
+      <button id="create-user">Create User</button>
+      
+      <div id="result">
+        <h3>Response:</h3>
+        <pre id="response">Click a button to test the API...</pre>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

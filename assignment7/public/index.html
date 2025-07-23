@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESTful API with JWT Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Management System</h1>
+    <p>A RESTful API with JWT Authentication</p>
+    
+    <!-- Authentication Section -->
+    <div id="auth-container">
+      <div class="auth-tabs">
+        <div class="auth-tab active" data-tab="login">Login</div>
+        <div class="auth-tab" data-tab="register">Register</div>
+      </div>
+      
+      <div class="auth-forms">
+        <!-- Login Form -->
+        <form id="login-form" class="auth-form active" id="login-form-element">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        
+        <!-- Register Form -->
+        <form id="register-form" class="auth-form" id="register-form-element">
+          <div class="form-group">
+            <label for="register-name">Name</label>
+            <input type="text" id="register-name" required>
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" required>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" required>
+          </div>
+          <div class="form-group">
+            <label for="register-age">Age (optional)</label>
+            <input type="number" id="register-age">
+          </div>
+          <div class="form-group">
+            <label for="register-location">Location (optional)</label>
+            <input type="text" id="register-location">
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- User Info Section (shown after login) -->
+    <div id="user-info" style="display: none;">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <p>Email: <span id="user-email"></span></p>
+      <button id="logout-btn" class="btn btn-danger">Logout</button>
+    </div>
+    
+    <!-- User Management Section -->
+    <div class="section">
+      <h2>Create New User</h2>
+      <form id="user-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age (optional)</label>
+          <input type="number" id="age">
+        </div>
+        <div class="form-group">
+          <label for="location">Location (optional)</label>
+          <input type="text" id="location">
+        </div>
+        <button type="submit" class="btn btn-primary">Create User</button>
+      </form>
+    </div>
+    
+    <div class="section">
+      <h2>Users</h2>
+      <div id="users-container"></div>
+    </div>
+    
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit User</h2>
+        <form id="edit-form">
+          <input type="hidden" id="edit-id">
+          <div class="form-group">
+            <label for="edit-name">Name</label>
+            <input type="text" id="edit-name" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-email">Email</label>
+            <input type="email" id="edit-email" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-age">Age (optional)</label>
+            <input type="number" id="edit-age">
+          </div>
+          <div class="form-group">
+            <label for="edit-location">Location (optional)</label>
+            <input type="text" id="edit-location">
+          </div>
+          <button type="submit" class="btn btn-primary">Update User</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
